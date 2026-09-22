@@ -7,7 +7,7 @@
 # line-lengths a documentation body text runs to.
 #
 # WHY THE KEY NAMES CHANGED
-#   `theme.colors` accepts any kebab-case key, but only the keys in
+#   `design.colors` accepts any kebab-case key, but only the keys in
 #   `COLOR_TO_SV_TOKEN` (src/infrastructure/css/theme/theme-generators.ts) emit
 #   the `--sv-*` platform tokens every prestyled island consumes. Everything else
 #   emits `--color-*` and does nothing until something cites it — and this
@@ -84,33 +84,34 @@ darkColors:
 codeBlock:
   theme: github-dark
 
-fonts:
-  sans:
-    family: IBM Plex Sans Variable
-    fallback: "'IBM Plex Sans', system-ui, -apple-system, sans-serif"
-    weights: [400, 500, 600, 700]
-    size: 16px
-    lineHeight: '1.7'
-  heading:
-    family: IBM Plex Sans Variable
-    fallback: "'IBM Plex Sans', system-ui, -apple-system, sans-serif"
-    weights: [600, 700, 800]
-    size: 40px
-    lineHeight: '1.2'
-    letterSpacing: '-0.02em'
-  mono:
-    family: JetBrains Mono Variable
-    fallback: "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace"
-    weights: [400, 500]
-    size: 14px
+typeScale:
+  families:
+    sans:
+      family: IBM Plex Sans Variable
+      fallback: "'IBM Plex Sans', system-ui, -apple-system, sans-serif"
+      weights: [400, 500, 600, 700]
+      size: 16px
+      lineHeight: '1.7'
+    heading:
+      family: IBM Plex Sans Variable
+      fallback: "'IBM Plex Sans', system-ui, -apple-system, sans-serif"
+      weights: [600, 700, 800]
+      size: 40px
+      lineHeight: '1.2'
+      letterSpacing: '-0.02em'
+    mono:
+      family: JetBrains Mono Variable
+      fallback: "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace"
+      weights: [400, 500]
+      size: 14px
 
-borderRadius:
+radius:
   sm: 0.25rem
   md: 0.5rem
   lg: 0.75rem
   full: 9999px
 
-shadows:
+elevation:
   sm: 0 1px 2px 0 rgb(0 0 0 / 0.05)
   md: 0 4px 6px -1px rgb(0 0 0 / 0.1)
   lg: 0 10px 15px -3px rgb(0 0 0 / 0.1)
